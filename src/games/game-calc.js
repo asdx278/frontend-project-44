@@ -12,7 +12,7 @@ const gameProcess = () => {
   };
 
   const selectedOperation = hasOperation();
-  const question = `Questioin: ${generatedNumberOne} ${selectedOperation} ${generatedNumberTwo}`;
+  const question = `Question: ${generatedNumberOne} ${selectedOperation} ${generatedNumberTwo}`;
 
   if (selectedOperation === '+') {
     correctAnswer = generatedNumberOne + generatedNumberTwo;
