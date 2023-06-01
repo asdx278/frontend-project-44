@@ -26,6 +26,6 @@ export default (rules, gameProcess) => {
     }
   }
   if (countCorrectAnswer === maxQuantityRound) {
-    console.log(`Congratulations, ${userName}`);
+    console.log(`Congratulations, ${userName}!`);
   }
 };
