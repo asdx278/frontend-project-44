@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/asdx278/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/asdx278/frontend-project-44/actions)",
+  "description": "The first project in the process of learning in Hexlet. Five console games: Calculator, Progression, Even Number Detection, Greatest Common Divisor Detection, Prime Number Detection",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
