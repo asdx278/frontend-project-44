@@ -1,5 +1,3 @@
-/*  eslint comma-dangle: ["error", "never"] */
-
 import readlineSync from 'readline-sync';
 
 export default (rules, gameProcess) => {
@@ -7,6 +5,7 @@ export default (rules, gameProcess) => {
   console.log(`Hello, ${userName}`);
   const maxQuantityRound = 3;
   let countCorrectAnswer = 0;
+
   console.log(rules);
   for (let i = 0; i < maxQuantityRound; i += 1) {
     const [correctAnswer, question] = gameProcess();
@@ -18,9 +17,7 @@ export default (rules, gameProcess) => {
       countCorrectAnswer += 1;
       console.log('Correct!');
     } else if (correctAnswer !== userAnswer) {
-      console.log(
-        `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`
-      );
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}`);
       console.log(`Let's try again, ${userName}!`);
       break;
     }
@@ -29,3 +26,10 @@ export default (rules, gameProcess) => {
     console.log(`Congratulations, ${userName}!`);
   }
 };
+
+const getGeneratedNumber = (maxRange) => {
+  const generatedNumber = Math.floor(Math.random() * maxRange);
+  return generatedNumber;
+};
+
+export { getGeneratedNumber };

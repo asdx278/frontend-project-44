@@ -1,23 +1,31 @@
+import getGame, { getGeneratedNumber } from '../index.js';
+
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const gameProcess = () => {
-  const generatedNumber = Math.floor(Math.random() * 30);
-
-  const question = `Question: ${generatedNumber}`;
-  let correctAnswer = 'yes';
-
-  if (generatedNumber < 2) {
-    correctAnswer = 'no';
+const isPrime = (value) => {
+  if (value < 2) {
+    return 'no';
   }
   let divider = 2;
-  while (divider <= generatedNumber / 2) {
-    if (generatedNumber % divider === 0) {
-      correctAnswer = 'no';
+  while (divider <= value / 2) {
+    if (value % divider === 0) {
+      return 'no';
     }
     divider += 1;
   }
+  return 'yes';
+};
+
+const startingGame = () => {
+  const generatedNumber = getGeneratedNumber(30);
+
+  const question = `Question: ${generatedNumber}`;
+
+  const correctAnswer = isPrime(generatedNumber);
 
   return [String(correctAnswer), question];
 };
 
-export { rules, gameProcess };
+export default () => {
+  getGame(rules, startingGame);
+};
