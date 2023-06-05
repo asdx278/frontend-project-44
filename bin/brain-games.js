@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import hasUserName from '../src/cli.js';
+import startBrainGame from '../src/cli.js';
 
-hasUserName();
+startBrainGame();
